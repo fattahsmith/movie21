@@ -1,6 +1,3 @@
-import { defineConfig } from 'vite';
-import laravel from 'laravel-vite-plugin';
-
 export default defineConfig({
     plugins: [
         laravel({
@@ -10,6 +7,9 @@ export default defineConfig({
     ],
     server: {
         host: 'localhost',
-        port: 5173, // Sesuaikan port jika diperlukan
+        port: 5173,
+    },
+    build: {
+        outDir: 'dist', // Output directory
     },
 });
